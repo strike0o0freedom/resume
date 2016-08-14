@@ -11,6 +11,8 @@ window.onload=function(){
     var resume=document.getElementById("pg_resume");
     var page1=document.getElementById("page1");
     var page2=document.getElementById("page2");
+    var list=document.getElementsByTagName("li");
+    var page=document.getElementsByClassName("page");
     var music_on=true;
 
     music.onclick=function(){
@@ -37,8 +39,24 @@ window.onload=function(){
         },2000);
 
         setTimeout(function(){
+
             page1.setAttribute("class","page fideout");
-            page2.setAttribute("class","page fidein");
+            page2.style.display="block";
+            setTimeout(function(){
+                page2.style.top="100%";
+                page2.setAttribute("class","page fidein");
+            },10)
+
         },3000)
     })
+
+    for(var i=0;i<list.length;i++){
+        (function(i){
+            list[i].onclick=function(){
+                page2.style.display="none";
+                page[i+2].style.display="block";
+            }
+        })(i)
+
+    }
 }
