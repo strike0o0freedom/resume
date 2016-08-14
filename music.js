@@ -9,6 +9,8 @@ window.onload=function(){
     var circle2=document.getElementsByClassName('pg_circle2')[0];
     var circle3=document.getElementsByClassName('pg_circle3')[0];
     var resume=document.getElementById("pg_resume");
+    var page1=document.getElementById("page1");
+    var page2=document.getElementById("page2");
     var music_on=true;
 
     music.onclick=function(){
@@ -34,5 +36,9 @@ window.onload=function(){
             circle3.style.display = "block";
         },2000);
 
+        setTimeout(function(){
+            page1.setAttribute("class","page fideout");
+            page2.setAttribute("class","page fidein");
+        },3000)
     })
 }

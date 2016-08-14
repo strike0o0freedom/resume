@@ -4,6 +4,7 @@
     border: none;
     font-size:1.5625vw;
     font-family: "Microsoft YaHei UI";
+    list-style: none;
 }
 html,body{
     height:100%;
@@ -27,12 +28,21 @@ html,body{
 .page{
     height:100%;
 }
-.page>#page1 .bg{
+.bg{
     position: absolute;
     height: 100%;
     width:100%;
 }
 /*页面1*/
+#page1{
+    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.fideout{
+    -webkit-transform: translate(0,-100%);
+    transform: translate(0,-100%);
+}
 #page1>.bg{
     background: url("./images/pg1_bg.png") no-repeat center center;
     background-size: 100%;
@@ -130,3 +140,95 @@ html,body{
 
 
 /*页面2*/
+#page2{
+    position: absolute;
+    display:block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top:100%;
+    width: 100%;
+}
+.fidein{
+    -webkit-transform: translate(0,-100%);
+    transform: translate(0,-100%);
+}
+#page2>.bg{
+    background: url("./images/pg2_bg.png") no-repeat center center;
+    background-size: 100%;
+}
+#page2>.my_photo{
+    position: absolute;
+    top:10vw;
+    left: 0;
+    right:0;
+    margin: auto;
+    width: 35vw;
+    height:35vw;
+    border-radius: 50%;
+    border:1vw solid #000;
+}
+#page2>.list{
+    position: absolute;
+    z-index: 3;
+    top:32vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 52vw;
+}
+.li_style{
+    text-align: center;
+    line-height: 13vw;
+    width:52vw;
+    height:13vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+.li_style:nth-child(1){
+    background: url("./images/menu1.png") no-repeat center center;
+    background-size: 100%;
+    -webkit-animation: li_move 0.5s linear 10s ;
+    animation: li_move 0.5s linear 10s ;
+}
+.li_style:nth-child(2){
+    background: url("./images/menu2.png") no-repeat center center;
+    background-size: 100%;
+    -webkit-animation: li_move 0.5s linear 11s ;
+    animation: li_move 0.5s linear 11s;
+}
+.li_style:nth-child(3){
+    background: url("./images/menu3.png") no-repeat center center;
+    background-size: 100%;
+    -webkit-animation: li_move 0.5s linear 12s ;
+    animation: li_move 0.5s linear 12s;
+}
+.li_style:nth-child(4){
+    background: url("./images/menu1.png") no-repeat center center;
+    background-size: 100%;
+    -webkit-animation: li_move 0.5s linear 1.5s ;
+    animation: li_move 0.5s linear 1.5s;
+}
+.li_style:nth-child(5){
+    background: url("./images/menu2.png") no-repeat center center;
+    background-size: 100%;
+    -webkit-animation: li_move 0.5s linear 2s ;
+    animation: li_move 0.5s linear 2s;
+}
+.li_style:nth-child(6){
+    background: url("./images/menu3.png") no-repeat center center;
+    background-size: 100%;
+    -webkit-animation: li_move 0.5s linear 2.5s ;
+    animation: li_move 0.5s linear 2.5s;
+}
+ @keyframes li_move {
+     0%{
+        opacity: 0;
+         -webkit-transform: translate(-24vw);
+         transform: translate(-24vw);
+     }
+     100%{
+         opacity: 1;
+        -webkit-transform: translate(0);
+         transform: translate(0);
+     }
+ }
