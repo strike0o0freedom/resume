@@ -11,6 +11,16 @@ html,body{
     overflow: hidden;
 }
 
+#li_menu{
+    position: fixed;
+    top:3vh;
+    left: 4vw;
+    width:5vw;
+    height:3.8vw;
+    background: url("./return.jpg") no-repeat center center;
+    background-size:100%;
+    z-index: 6;
+}
 /*音乐图标*/
 #music{
     position:fixed;
@@ -239,10 +249,17 @@ html,body{
      }
  }
 
- /*页面3--基本资料*/
-#page3{
-    display: none;
+#page3,#page4,#page5,#page6,#page7,#page8{
+    position: absolute;
+    top:0;
+    width: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
 }
+ /*页面3--基本资料*/
+
 #page3>.bg{
     background: url("./images/li_bg1.png") no-repeat center center;
     background-size: 100%;
@@ -278,9 +295,7 @@ html,body{
 }
 
 /*页面4--教育背景*/
-#page4{
-    display: none;
-}
+
 #page4>.bg{
     background: url("./images/li_bg2.png") no-repeat center center;
     background-size: 100%;
@@ -293,9 +308,7 @@ html,body{
     color:red;
 }
 /*页面5--职业技能*/
-#page5{
-    display: none;
-}
+
 #page5>.bg{
     background: url("./images/li_bg3.png") no-repeat center center;
     background-size: 100%;
@@ -310,9 +323,7 @@ html,body{
 }
 
 /*页面6--工作经历*/
-#page6{
-    display:none;
-}
+
 #page6>.bg{
     background: url("./images/li_bg4.png") no-repeat center center;
     background-size: 100%;
@@ -332,9 +343,7 @@ html,body{
     font-size: 5vw;
 }
 /*页面7--自我评价*/
-#page7{
-    display:none;
-}
+
 #page7>.bg{
     background: url("./images/li_bg5.png") no-repeat center center;
     background-size: 100%;
@@ -347,9 +356,7 @@ html,body{
     font-size: 5vw;
 }
 /*页面8--Github*/
-#page8{
-    display:none;
-}
+
 #page8>.bg{
     background: url("./images/li_bg6.png") no-repeat center center;
     background-size: 100%;

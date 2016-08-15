@@ -13,7 +13,9 @@ window.onload=function(){
     var page2=document.getElementById("page2");
     var list=document.getElementsByTagName("li");
     var page=document.getElementsByClassName("page");
+    var ret=document.getElementById("li_menu");
     var music_on=true;
+    var index;
 
     music.onclick=function(){
        if(music_on){
@@ -53,10 +55,21 @@ window.onload=function(){
     for(var i=0;i<list.length;i++){
         (function(i){
             list[i].onclick=function(){
-                page2.style.display="none";
-                page[i+2].style.display="block";
+                index=i+2;
+                page2.style.top="0";
+                page2.style.webkitTransform="rotateY(90deg)";
+               setTimeout(function(){
+                   page[i+2].style.webkitTransform="rotateY(0deg)";
+               },500)
             }
         })(i)
 
     }
+    ret.addEventListener("click",function(event){
+        page[index].style.webkitTransform="rotateY(-90deg)";
+        setTimeout(function(){
+            page2.style.webkitTransform="rotateY(0deg)";
+        },500)
+    })
+
 }
